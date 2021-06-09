@@ -21,12 +21,6 @@ fun main(args: Array<String>) {
 
 @RestController
 class Controller {
-	@GetMapping("/aooo")
-	fun a() = "Value!"
-}
-
-@FeignClient("spring-cloud-eureka-client")
-interface GreetingClient {
-	@RequestMapping("/greeting")
-	fun greeting(): String
+	@GetMapping("/my-endpoint")
+	fun a() = "Key" to "Value"
 }
